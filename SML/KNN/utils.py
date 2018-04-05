@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 def get_mnist_data(fn, limit=None):
     data = pd.read_csv(fn).as_matrix()
     #shuffle data 
-    np.random.suffle(data)
+    np.random.shuffle(data)
     
     X = data[:,1:]/255.0 # normalise the data since they are greyscale image values
     Y = data[:,0] # y value is given at the start
@@ -26,7 +26,7 @@ def generate_xor(n=200, d=2):
     Y = np.array([0]*100 + [1]*100)
     return X,Y
 
-def generate_donut(N=200,R_inner=5, R_outer=10):
+#def generate_donut(N=200,R_inner=5, R_outer=10):
     
     
     
