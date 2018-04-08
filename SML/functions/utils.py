@@ -25,7 +25,7 @@ def generate_xor(n=200, d=2):
     X[k:j] = np.random.random((k,d))/2
     X[j:i] = np.random.random((k,d))/2 + np.array([[0,0.5]])
     X[i:] = np.random.random((k,d))/2 + np.array([[0.5,0]])
-    Y = np.array([0]*100 + [1]*100) # create cloud of points from 0 to 1 on X-axis
+    Y = np.array([0]*j + [1]*j) # create cloud of points from 0 to 1 on X-axis
     return X,Y
 
 def generate_donut(N=200,R_inner=5, R_outer=10):

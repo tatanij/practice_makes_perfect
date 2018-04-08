@@ -11,8 +11,10 @@ model.train()
 model.fit()
 print('Classification rate:',model.score())
 
+'''
 threshold = 0.5
 for word, index in word_index.items():
     weight = model.w[index]
     if weight > threshold or weight < -threshold:
         print(word+":", weight)
+'''
