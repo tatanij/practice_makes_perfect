@@ -1,7 +1,10 @@
 import numpy as np 
-from ..functions.activation_functions import sigmoid
-from ..functions.loss_functions import cross_entropy
-from ..functions.regularisation_functions import l2_regularization
+import sys
+
+sys.path.append('../../functions')
+from activation_functions import sigmoid
+from loss_functions import cross_entropy
+from regularisation_functions import l2_regularization
 
 class LogisticRegressor:
     # inputs(X: 'input data', Y: 'predicants', lr: 'learning rate', l: 'lambda')

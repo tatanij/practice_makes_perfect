@@ -28,6 +28,11 @@ def generate_xor(n=200, d=2):
     Y = np.array([0]*j + [1]*j) # create cloud of points from 0 to 1 on X-axis
     return X,Y
 
+def generate_simple_xor():
+    X = np.array([[0,1],[1,0]])
+    Y = np.array([0,1,1,0])
+    return X,Y
+
 def generate_donut(N=200,R_inner=5, R_outer=10):
         
     q = int(N/2)

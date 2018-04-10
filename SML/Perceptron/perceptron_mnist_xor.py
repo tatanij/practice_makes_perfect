@@ -2,13 +2,13 @@ import numpy as np
 import matplotlib.pyplot as plt
 from datetime import datetime
 import import_ipynb
-from perceptron_intuition import Perceptron
+from perceptron_intuition.ipynb import Perceptron
 import sys
 sys.path.append('../functions/')
-from utils import get_mnist_data, generate_xor
+from utils import get_mnist_data, generate_simple_xor
 
-
-X,Y = get_mnist_data()
+fn='../mnist/train.csv'
+X,Y = get_mnist_data(fn)
 
 # perceptron is only capable of binary classification
 # therfore only take samples where Y==0 and Y==1 then
@@ -23,7 +23,7 @@ model.fit(X,Y,lr=10e-3)
 print('MNIST train accuracy:',model.score(X,Y))
 
 print('\n XOR results:')
-X,Y = generate_xor(2,2)
+X,Y = generate_simple_xor()
 model.fit(X,Y)
 print('XOR accuracy:',model.score(X,Y))
 

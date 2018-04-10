@@ -14,4 +14,4 @@ Y_actual = np.array([
 
 calced_cse = np.array([])
 
-print('Testing forward pass:',cross_entropy(Y_actual,Yhat))
+print('Testing forward pass:',cross_entropy(Y_actual,Y_hat))

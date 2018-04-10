@@ -23,3 +23,10 @@ def softplus(z, dy=False):
         return sigmoid(z)
     else:
         return np.log(1+np.exp(z))
+    
+def softmax(a, dy=False):
+    if not dy:
+        return np.exp(a)/np.exp(a).sum(axis=1, keepdims=True)
+    else: 
+        return -np.exp(2*a)
+        
