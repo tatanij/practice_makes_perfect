@@ -8,3 +8,5 @@ def cross_entropy(Y,Yhat,dy=False):
          return Yhat-Y
     else:
         return -np.mean(Y*np.log(Yhat) + (1-Y)*np.log(1-Yhat))
+def diff(Y, Yhat):
+    return (Yhat - Y)
